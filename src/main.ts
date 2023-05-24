@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
-// import ElementPlus from "element-plu÷s";
+
 import 'element-plus/dist/index.css'
+
 import App from './App.vue'
 
 import { createPinia } from 'pinia'
@@ -11,6 +12,7 @@ pinia.use(piniaPluginPersistedstate)
 import router from './router'
 
 import 'element-plus/theme-chalk/dark/css-vars.css'
+import './assets/css/elegantBlue.scss'
 
 const app = createApp(App)
 

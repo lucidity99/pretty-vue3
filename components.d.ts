@@ -56,6 +56,7 @@ declare module '@vue/runtime-core' {
     IEpExpand: typeof import('~icons/ep/expand')['default']
     IEpFold: typeof import('~icons/ep/fold')['default']
     IEpLxNotice: typeof import('~icons/ep/lx-notice')['default']
+    IEpMoreFilled: typeof import('~icons/ep/more-filled')['default']
     IEpReading: typeof import('~icons/ep/reading')['default']
     IEpSetting: typeof import('~icons/ep/setting')['default']
     MoIcon: typeof import('./src/components/MoIcon.vue')['default']

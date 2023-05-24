@@ -8,6 +8,7 @@
 import zh from 'element-plus/es/locale/lang/zh-cn'
 </script>
 
-<style>
-@import '~/assets/css/index.css';
+<style lang="scss">
+@import '~/assets/css/element/index.scss';
+@import '~/assets/css/index.scss';
 </style>

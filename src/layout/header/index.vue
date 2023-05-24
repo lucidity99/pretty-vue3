@@ -1,8 +1,7 @@
 <template>
   <div class="v-header">
-    <div class="mx-4 text-lg logo">Pretty Vue</div>
     <!-- 折叠按钮 -->
-    <div class="inline-flex items-center h-full text-xl" @click="collapseChage">
+    <div class="inline-flex items-center h-full pl-2 text-xl" @click="collapseChage">
       <i-ep-expand class="text-sm" v-if="sidebar.collapse" />
       <i-ep-fold class="text-sm" v-else />
     </div>
@@ -13,9 +12,6 @@
       <div class="flex items-center">
         <!-- 消息中心 -->
         <Message class="ml-4" />
-        <a href="https://github.com/lucidity99/mocha-vue3-system" taret="_blank">
-          <i-ep-reading class="ml-4"
-        /></a>
 
         <!-- 用户名下拉菜单 -->
         <el-dropdown class="mx-2" trigger="click" @command="handleCommand">
@@ -39,9 +35,12 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useSidebarStore } from '~/store/sidebar'
+import { useUserStore } from '~/store/user'
 import { useRouter } from 'vue-router'
 import { useDark, useToggle } from '@vueuse/core'
 import imgurl from '~/assets/images/img.jpg'
+
+const useUser = useUserStore()
 
 import Message from './Message.vue'
 
@@ -67,26 +66,10 @@ onMounted(() => {
 const router = useRouter()
 const handleCommand = (command: string) => {
   if (command == 'loginout') {
-    userStore.userLogout()
+    useUser.userLogout()
     router.push('/login')
   } else if (command == 'user') {
     router.push('/system/profile')
   }
 }
 </script>
-<style scoped lang="scss">
-.v-header {
-  position: fixed;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  top: 0;
-  border-bottom: 1px solid var(--el-border-color);
-
-  .logo {
-    color: var(--el-color-primary);
-  }
-}
-</style>

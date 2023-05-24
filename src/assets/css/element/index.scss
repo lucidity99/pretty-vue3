@@ -1,0 +1,31 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #2f408a
+    ),
+    'success': (
+      'base': #2ba471
+    ),
+    'danger': (
+      'base': #fa2256
+    )
+  ),
+  $text-color: (
+    'primary': #2f408a,
+    // 'regular': #9aa2c6,
+    'secondary': #9da5c8
+  ),
+  $menu: (
+    ('item-height': 50px)
+  ),
+  $bg-color: (
+    'page': #f5f7fc
+  ),
+  $box-shadow: (
+    'light': 0px 0px 20px rgba(15, 51, 122, 0.12)
+  )
+);
+
+// 如果只是按需导入，则可以忽略以下内容。
+// 如果你想导入所有样式:
+@use 'element-plus/theme-chalk/src/index.scss' as *;

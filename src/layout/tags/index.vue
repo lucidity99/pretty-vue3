@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow mo-tags" v-if="tags.show">
+  <div class="mo-tags" v-if="tags.show">
     <el-scrollbar>
       <ul v-click-outside="onClickOutside">
         <li
@@ -47,7 +47,7 @@ import { Close, Minus } from '@element-plus/icons-vue'
 const route = useRoute()
 const router = useRouter()
 const tags = useTagsStore()
-const siderbarStore = useSidebarStore()
+const useSidebar = useSidebarStore()
 
 const isActive = (path: string) => {
   return path === route.fullPath
@@ -64,10 +64,11 @@ let currentIndex = ref(0)
 function openContext(e: MouseEvent, index: number) {
   contextmenuShow.value = true
   currentIndex.value = index
+  console.log(e)
 
   contextmenuPositon.value = {
-    top: e.x,
-    left: e.y
+    top: e.y - 54,
+    left: e.x - (useSidebar.collapse ? 64 : 200)
   }
 }
 
@@ -123,50 +124,3 @@ const closeOther = () => {
   tags.closeTagsOther(curItem)
 }
 </script>
-
-<style lang="scss">
-.mo-tags {
-  position: fixed;
-  top: 60px;
-  z-index: 1001;
-  left: 200px;
-  right: 0;
-  height: 30px;
-  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
-
-  &.tag-collapse {
-    left: 64px;
-  }
-
-  ul {
-    display: flex;
-
-    li {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      padding-right: 4px;
-      height: 24px;
-      margin-top: 3px;
-      font-size: 12px;
-
-      margin-right: 2px;
-      border: 1px solid var(--el-border-color);
-      background: var(--el-fill-color-blank);
-      border-radius: 2px;
-
-      > span {
-        padding: 0 4px 0 8px;
-      }
-
-      &.active {
-        color: var(--el-color-primary);
-      }
-
-      &:hover {
-        background-color: var(--el-bg-color-page);
-      }
-    }
-  }
-}
-</style>

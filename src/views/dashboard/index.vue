@@ -1,48 +1,46 @@
 <template>
-  <div class="container">
-    <div class="flex items-center justify-between px-6 pt-4 mb-8">
+  <div class="p-4">
+    <div class="flex items-center justify-between p-4 mb-4">
       <div class="flex items-center">
         <el-avatar size="large" class="mr-4" :src="imgurl" />
         <div>
           <p class="mb-2">早安, mocha, 开始您一天的工作吧！</p>
-          <p class="text-gray-400">今日晴，20℃ - 32℃！</p>
+          <p class="text-sm text-secondary">今日晴，20℃ - 32℃！</p>
         </div>
       </div>
       <div class="flex">
         <div class="mr-10 text-right">
-          <p class="mb-2 text-gray-400">待办</p>
-          <p class="text-xl">2/10</p>
+          <p class="mb-2 text-sm text-secondary">待办</p>
+          <p>2/10</p>
         </div>
         <div class="mr-10 text-right">
-          <p class="mb-2 text-gray-400">项目</p>
-          <p class="text-xl">5</p>
+          <p class="mb-2 text-sm text-secondary">项目</p>
+          <p>5</p>
         </div>
         <div class="text-right">
-          <p class="mb-2 text-gray-400">应收</p>
-          <p class="text-xl">5000</p>
+          <p class="mb-2 text-sm text-secondary">应收</p>
+          <p>5000</p>
         </div>
       </div>
     </div>
 
-    <div class="p-4">
-      <NumberCard />
-      <el-row :gutter="16" class="mt-4">
-        <el-col :span="16"> <ClientList /></el-col>
-        <el-col :span="8"><TodoList /></el-col>
-      </el-row>
-      <LineChart />
-      <el-row :gutter="16" class="mt-4">
-        <el-col :span="8"
-          ><el-card><PieChart /></el-card
-        ></el-col>
-        <el-col :span="8"
-          ><el-card><Chart1 /></el-card
-        ></el-col>
-        <el-col :span="8"
-          ><el-card><Chart2 /></el-card
-        ></el-col>
-      </el-row>
-    </div>
+    <NumberCard />
+    <el-row :gutter="16" class="mt-4">
+      <el-col :span="16"> <ClientList /></el-col>
+      <el-col :span="8"><TodoList /></el-col>
+    </el-row>
+    <LineChart />
+    <el-row :gutter="16" class="mt-4">
+      <el-col :span="8"
+        ><el-card><PieChart /></el-card
+      ></el-col>
+      <el-col :span="8"
+        ><el-card><Chart1 /></el-card
+      ></el-col>
+      <el-col :span="8"
+        ><el-card><Chart2 /></el-card
+      ></el-col>
+    </el-row>
   </div>
 </template>
 

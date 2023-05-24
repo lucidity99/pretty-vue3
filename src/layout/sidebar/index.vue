@@ -1,5 +1,5 @@
 <template>
-  <el-aside width="200px" class="fixed top-[60px] h-full">
+  <el-aside width="200px" class="fixed">
     <el-menu class="shadow" :class="sidebar.collapse" :collapse="sidebar.collapse" router>
       <SidebarItem :item="item" v-for="item in items" :key="item.name" />
     </el-menu>
@@ -18,18 +18,3 @@ const items = router.options.routes
 
 const sidebar = useSidebarStore()
 </script>
-
-<style lang="scss" scoped>
-.el-aside {
-  > .el-menu {
-    position: fixed;
-    width: 200px;
-    border-right: 0 none;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-  }
-  > .el-menu--collapse {
-    width: 64px;
-  }
-}
-</style>

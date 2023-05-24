@@ -1,0 +1,22 @@
+:root {
+  --el-menu-bg-color: #0f337a;
+  --el-menu-text-color: #d2d9e6;
+  --el-menu-hover-bg-color: var(--el-color-primary);
+}
+
+.el-menu-item:hover,
+.el-sub-menu__title:hover {
+  color: #fff;
+}
+
+#app {
+  color: var(--el-text-color-primary);
+  .el-card {
+    --el-card-border-radius: 20px;
+    border-radius: var(--el-card-border-radius);
+    border: 0 none;
+  }
+}
+/* f5f7fc */
+
+/* light blue 718ebf */

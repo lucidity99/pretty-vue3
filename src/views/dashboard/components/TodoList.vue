@@ -1,14 +1,18 @@
 <template>
-  <el-card class="h-[342px]">
+  <el-card shadow="hover" class="h-[342px]">
     <template #header>
       <div class="flex justify-between card-header">
         <span>待办</span>
-        <el-link>查看更多</el-link>
+        <el-link><i-ep-more-filled /></el-link>
       </div>
     </template>
-    <div v-for="(item, index) in todoList" :key="index" class="text">
-      {{ item.title }}
-    </div>
+    <ul>
+      <li v-for="(item, index) in todoList" :key="index" class="py-1 text-sm">
+        <el-checkbox>
+          {{ item.title }}
+        </el-checkbox>
+      </li>
+    </ul>
   </el-card>
 </template>
 

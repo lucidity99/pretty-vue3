@@ -1,7 +1,7 @@
 <template>
   <div class="w-8 cursor-pointer">
-    <el-badge :value="message" class="item" :hidden="!message" @click="visible = true">
-      <i-ep-bell />
+    <el-badge is-dot :hidden="!message" @click="visible = true">
+      <i-ep-bell class="text-sm" />
     </el-badge>
     <el-drawer class="no-header" v-model="visible" size="80%" append-to-body>
       <MessageCenter />

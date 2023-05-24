@@ -1,4 +1,9 @@
 <template>
+  <div class="mx-1 text-xs text-center transition-all logo" v-if="sidebar.collapse">
+    Pretty<br />Vue
+  </div>
+  <div class="mx-4 text-lg logo" v-else>Pretty Vue</div>
+
   <v-header :class="{ 'header-collapse': sidebar.collapse }" />
   <v-tags :class="{ 'tag-collapse': sidebar.collapse }"></v-tags>
   <v-sidebar class="siderbar" />
@@ -22,17 +27,3 @@ import vTags from './tags/index.vue'
 const sidebar = useSidebarStore()
 const tags = useTagsStore()
 </script>
-
-<style lang="scss">
-.main-content {
-  height: calc(100vh - 90px);
-  overflow: auto;
-  margin-top: 90px;
-  padding-left: 200px;
-  transition: 0.3s ease-in-out;
-
-  &.content-collapse {
-    padding-left: 64px;
-  }
-}
-</style>
