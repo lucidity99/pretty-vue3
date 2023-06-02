@@ -13,9 +13,7 @@
       </div>
       <div class="absolute right-2 top-2">
         <el-tooltip :content="desc" effect="light">
-          <el-icon class="text-gray-300"
-            ><el-icon><QuestionFilled /></el-icon
-          ></el-icon>
+          <i-ep-question-filled class="text-secondary" />
         </el-tooltip>
       </div>
     </div>

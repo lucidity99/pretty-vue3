@@ -1,6 +1,11 @@
 <template>
-  <div class="container">
+  <div class="p-4">
     <el-card>
+      <template #header>
+        <div class="flex justify-between card-header">
+          <span>Basic Form</span>
+        </div>
+      </template>
       <el-form ref="formRef" :rules="rules" :model="form" label-width="80px">
         <el-form-item label="表单名称" prop="name">
           <el-input v-model="form.name"></el-input>

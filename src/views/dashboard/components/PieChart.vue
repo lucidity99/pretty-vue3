@@ -9,11 +9,19 @@ import MyEchart from '~/components/echarts/MyEchart.vue'
 const options = reactive({
   title: {
     text: '访问来源',
-    subtext: 'Fake Data',
-    left: 'left'
+
+    left: 'left',
+    textStyle: {
+      color: '#2f408a',
+      fontWeight: 'normal'
+    }
   },
   tooltip: {
     trigger: 'item'
+  },
+  legend: {
+    bottom: 0,
+    left: 'center'
   },
 
   series: [
@@ -22,11 +30,11 @@ const options = reactive({
       type: 'pie',
       radius: '50%',
       data: [
-        { value: 1048, name: 'Search Engine' },
-        { value: 735, name: 'Direct' },
+        { value: 1048, name: '搜索引擎' },
+        { value: 735, name: '直链' },
         { value: 580, name: 'Email' },
-        { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' }
+        { value: 484, name: '广告' },
+        { value: 300, name: '视频' }
       ],
       emphasis: {
         itemStyle: {

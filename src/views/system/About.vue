@@ -2,8 +2,8 @@
   <div v-watermark>
     <PageHeader title="关于">
       <a target="_blank">Pretty Vue</a> 是一个基于Vue3.0、Vite、 Element Plus
-      、TypeScript
-      的后台解决方案，目标是为项目开发,提供现成的开箱解决方案及丰富的示例。
+      、TypeScript、Tailwind CSS 的玩具项目，主要用于系统UI改造和展示，尝试更多样的UI可能性。
+      
     </PageHeader>
 
     <div class="container">

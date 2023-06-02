@@ -9,7 +9,11 @@ const options = reactive({
   title: {
     text: '成交占比',
     subtext: '2023.3.28',
-    left: 'left'
+    left: 'left',
+    textStyle: {
+      color: '#2f408a',
+      fontWeight: 'normal'
+    }
   },
   legend: {
     top: 'bottom'

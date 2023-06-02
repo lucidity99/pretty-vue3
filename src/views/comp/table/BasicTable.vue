@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="p-4">
     <div class="relative flex">
       <el-form inline>
         <el-form-item>
@@ -11,10 +11,8 @@
         <el-form-item>
           <el-input v-model="queryForm.keyword" placeholder="请输入客户名称搜索" />
         </el-form-item>
-        <el-form-item v-if="moreVisible">
-          <el-input v-model="queryForm.address" placeholder="请输入地址" />
-        </el-form-item>
-        <el-form-item v-if="moreVisible">
+
+        <el-form-item>
           <el-input v-model="queryForm.mobile" placeholder="请输入手机" />
         </el-form-item>
         <el-form-item>
@@ -27,12 +25,6 @@
           <el-button type="primary" :icon="Search" @click="handleSearch">搜索</el-button>
         </el-form-item>
       </el-form>
-      <span
-        class="absolute top-0 right-0 inline-flex items-center ml-auto text-sm cursor-pointer"
-        @click="moreVisible = !moreVisible"
-      >
-        <i-ep-bottom-right />{{ moreVisible ? '展开' : '收起' }}</span
-      >
     </div>
     <el-card>
       <div class="flex mb-1">
@@ -72,12 +64,8 @@
         <el-table-column prop="createdBy" label="创建人" min-width="200" />
         <el-table-column label="操作" width="100" fixed="right" align="center">
           <template #default="scope">
-            <i-ep-edit v-permiss="15" class="mr-4 cursor-pointer" />
-            <i-ep-delete
-              class="text-red-500 cursor-pointer"
-              @click="handleDelete(scope.row.id)"
-              v-permiss="16"
-            />
+            <i-ep-edit class="mr-4 cursor-pointer" />
+            <i-ep-delete class="text-red-500 cursor-pointer" @click="handleDelete(scope.row.id)" />
           </template>
         </el-table-column>
       </el-table>
@@ -98,8 +86,6 @@ import { Search } from '@element-plus/icons-vue'
 import { useTable } from '~/hooks/table'
 
 import clientApi from '~/api/client'
-
-let moreVisible = ref(false)
 
 const queryForm = reactive({
   address: '',

@@ -1,7 +1,9 @@
 :root {
+  color-scheme: 'elegant-blue';
   --el-menu-bg-color: #0f337a;
   --el-menu-text-color: #d2d9e6;
   --el-menu-hover-bg-color: var(--el-color-primary);
+  --el-menu-active-color: #fff;
 }
 
 .el-menu-item:hover,
@@ -17,6 +19,18 @@
     border: 0 none;
   }
 }
-/* f5f7fc */
 
-/* light blue 718ebf */
+// 修改系统导航条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--el-border-color);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: (--el-bg-color);
+}

@@ -16,7 +16,11 @@ import './assets/css/elegantBlue.scss'
 
 const app = createApp(App)
 
-// app.use(ElementPlus);
 app.use(pinia)
 app.use(router)
+
+// 注册指令
+import directive from './directive'
+directive(app)
+
 app.mount('#app')

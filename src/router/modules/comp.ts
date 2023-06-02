@@ -26,17 +26,6 @@ const routes: RouteRecordRaw[] = [
           title: 'form'
         },
         component: () => import('~/views/comp/form/BasicForm.vue')
-      },
-
-      {
-        path: 'icon',
-        name: 'icon',
-        meta: {
-          title: 'icons',
-          permiss: '10',
-          icon: 'ep-sunrise'
-        },
-        component: () => import(/* webpackChunkName: "icon" */ '~/views/feat/icons/index.vue')
       }
     ]
   }

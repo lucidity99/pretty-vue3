@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="p-4">
     <el-row :gutter="16">
       <el-col :span="12">
         <el-card> <my-echart :options="options1" style="height: 300px"></my-echart> </el-card

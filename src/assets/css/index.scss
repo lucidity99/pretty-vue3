@@ -6,11 +6,14 @@
 
 body {
   background-color: var(--el-bg-color-page);
+  font-size: var(--el-font-size-base);
 }
 
-.text-primary {
-  color: var(--el-text-color);
+svg,
+img {
+  display: inline-block;
 }
+
 .text-secondary {
   color: var(--el-text-color-secondary);
 }

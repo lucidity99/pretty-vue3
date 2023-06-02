@@ -16,7 +16,6 @@ const routes: RouteRecordRaw[] = [
         name: 'tabs',
         meta: {
           title: 'tab',
-          permiss: '3',
           icon: 'ep-price-tag'
         },
 
